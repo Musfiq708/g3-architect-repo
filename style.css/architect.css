@@ -105,7 +105,6 @@ main {
 .team-container {
     display: flex;
     align-items: center;
-    width: 100%;
 }
 
 .team-img-container {
@@ -150,6 +149,9 @@ main {
     line-height: 26px;
     padding-bottom: 15px;
 }
+.team-tile{
+    text-align: center;
+}
 
 /* responsive styles */
 /* mobile device version */
@@ -161,16 +163,29 @@ main {
     nav {
         flex-direction: column;
     }
-
+.team-container{
+    flex-direction: column-reverse;
+}
+.team-img-container{
+    grid-template-columns: repeat(1, 1fr);
+    margin-top: 50px;
+}
 }
 
 /* tablet or medium devices */
+
 @media screen and (min-width:576px) and (max-width:960px) {
     header {
         padding: 50px;
     }
 
-    nav {
+    nav  {
         flex-direction: column;
+    }
+    .team-container{
+        flex-direction: column;
+    }
+    .btn-second{
+        margin-left: 240px;
     }
 }
